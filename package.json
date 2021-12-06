@@ -1,11 +1,11 @@
 {
-  "name": "node-red-contrib-gmail-fetch",
-  "version": "0.0.7",
-  "description": "Gmailノードです。",
+  "name": "node-red-contrib-google-analytics",
+  "version": "0.0.1",
+  "description": "Google Analycitsのノードです。",
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/n0bisuke/node-red-contrib-gmail-fetch.git"
+    "url": "git+https://github.com/n0bisuke/node-red-contrib-google-analytics.git"
   },
   "scripts": {
     "git-push": "git add -A && git commit -m 'update' && git push origin master",
@@ -14,18 +14,18 @@
   },
   "node-red": {
     "nodes": {
-      "GetLastMessage": "./nodes/getLastMessage/getLastMessage.js",
-      "Send": "./nodes/send/send.js"
+      "Realtime": "./nodes/realtime/realtime.js"
     }
   },
   "keywords": [
-    "Gmail",
+    "Google Analytics",
     "Google",
-    "node-red"
+    "node-red",
+    "GA"
   ],
   "author": "n0bisuke",
   "license": "Apache 2.0",
   "dependencies": {
-    "googleapis": "^66.0.0"
+    "@google-analytics/data": "^2.8.0"
   }
 }

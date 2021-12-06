@@ -1,17 +1,14 @@
 <script>
-    RED.nodes.registerType('Send',{
-        category: 'Gmail',
+    RED.nodes.registerType('Realtime',{
+        category: 'Google Analytics',
         color: '#E34C41',
         defaults: {
-            to: {value:"", required:true},
-            from: {value:"", required:true},
-            subject: {value:"", required:false},
-            message: {value:"", required:false},
+            propertyId: {value:"", required:true},
         },
-        credentials: {
-            Credentials:{value:"", type: "password", required:true},
-            AccessToken:{value:"", type: "password", required:true}
-        },
+        // credentials: {
+        //     Credentials:{value:"", type: "password", required:true},
+        //     AccessToken:{value:"", type: "password", required:true}
+        // },
         inputs: 1,
         outputs: 1,
         icon: "envelope.png",
@@ -22,7 +19,7 @@
     });
 </script>
 
-<script type="text/x-red" data-template-name="Send">
+<script type="text/x-red" data-template-name="Realtime">
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
@@ -77,6 +74,6 @@
     </div>
 </script>
 
-<script type="text/x-red" data-help-name="Send">
-    <p>Gmailでメールを送信します。</p>
+<script type="text/x-red" data-help-name="Realtime">
+    <p>Google Analyticsのリアルタイム民</p>
 </script>

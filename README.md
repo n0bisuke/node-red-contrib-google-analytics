@@ -18,6 +18,8 @@ AdminタブからInstall
 
 とりあえずリアルタイムに閲覧しているユーザー数だけを取得するノードとなっています。
 
+> ![](https://i.gyazo.com/ad8e0962b3763e63cda30ee621eb96fe.png)
+
 > ![](https://i.gyazo.com/5d9e1d4ed32fd89c7d6d7507e5aafe48.png)
 
 ## LINK

@@ -1,7 +1,7 @@
 <script>
     RED.nodes.registerType('Realtime',{
         category: 'Google Analytics',
-        color: '#E34C41',
+        color: '#E47500',
         defaults: {
             propertyId: {value:"", required:true},
         },
@@ -11,10 +11,10 @@
         // },
         inputs: 1,
         outputs: 1,
-        icon: "envelope.png",
+        icon: "serial.svg",
         align: "right",
         label: function() {
-            return this.name||"Send";
+            return this.name||"Realtime";
         }
     });
 </script>
@@ -26,52 +26,13 @@
     </div>
 
     <div class="form-row">
-        <label for="node-input-Credentials">
+        <label for="node-input-propertyId">
             <i class="icon-tag"></i>
-            Credentials
+            Google Analytics propertyId (GA4)
         </label>
-        <input type="text" id="node-input-Credentials" placeholder="Google Application's credentials">
+        <input type="text" id="node-input-propertyId" placeholder="PropertyId">
     </div>
 
-    <div class="form-row">
-        <label for="node-input-AccessToken">
-            <i class="icon-tag"></i>
-            Gmail AccessToken
-        </label>
-        <input type="text" id="node-input-AccessToken" placeholder="Gmail AccessToken">
-    </div>
-
-    <div class="form-row">
-        <label for="node-input-to">
-            <i class="icon-tag"></i>
-            To - 宛先
-        </label>
-        <input type="text" id="node-input-to" placeholder="to">
-    </div>
-
-    <div class="form-row">
-        <label for="node-input-from">
-            <i class="icon-tag"></i>
-            From - 送信
-        </label>
-        <input type="text" id="node-input-from" placeholder="from">
-    </div>
-
-    <div class="form-row">
-        <label for="node-input-subject">
-            <i class="icon-tag"></i>
-            Subject - 件名
-        </label>
-        <input type="text" id="node-input-subject" placeholder="subject">
-    </div>
-
-    <div class="form-row">
-        <label for="node-input-message">
-            <i class="icon-tag"></i>
-            Message - 本文
-        </label>
-        <input type="text" id="node-input-message" placeholder="message">
-    </div>
 </script>
 
 <script type="text/x-red" data-help-name="Realtime">

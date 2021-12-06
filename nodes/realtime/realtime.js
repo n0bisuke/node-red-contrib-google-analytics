@@ -35,7 +35,7 @@ module.exports = (RED) => {
                 const val = response.rows[0].metricValues[0].value;
                 console.log(`人数:`,response.rows[0].metricValues[0].value);
 
-                const msg = val;
+                const msg = response.rows[0].metricValues[0];
                 msg.payload = msg;
                 node.send(msg);
 

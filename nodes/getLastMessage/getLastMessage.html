@@ -1,0 +1,56 @@
+<script>
+    RED.nodes.registerType('GetLastMessage',{
+        category: 'Gmail',
+        color: '#E34C41',
+        defaults: {
+            name: {value:""},
+            Q:{value:"", required:false},
+        },
+        credentials: {
+            Credentials:{value:"", type: "password", required:true},
+            AccessToken:{value:"", type: "password", required:true}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "envelope.png",
+        align: "right",
+        label: function() {
+            return this.name||"GetLastMessage";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="GetLastMessage">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-Credentials">
+            <i class="icon-tag"></i>
+            Credentials
+        </label>
+        <input type="text" id="node-input-Credentials" placeholder="Google Application's credentials">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-AccessToken">
+            <i class="icon-tag"></i>
+            Gmail AccessToken
+        </label>
+        <input type="text" id="node-input-AccessToken" placeholder="Gmail AccessToken">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-Q">
+            <i class="icon-tag"></i>
+            Q
+        </label>
+        <input type="text" id="node-input-Q" placeholder="検索クエリ(例: `from:info@hoge.com`)">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="GetLastMessage">
+    <p>Gmailの最新の1件を取得してきます。</p>
+</script>

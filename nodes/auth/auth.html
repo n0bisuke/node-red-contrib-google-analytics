@@ -1,0 +1,44 @@
+<script>
+    RED.nodes.registerType('Auth',{
+        category: 'Gmail',
+        color: '#E34C41',
+        defaults: {
+            Credentials:{value:"", required:true},
+            scope: {value:"", required:true},
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "envelope.png",
+        align: "right",
+        label: function() {
+            return this.name||"Auth";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="Auth">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-Credentials">
+            <i class="icon-tag"></i>
+            Credentials
+        </label>
+        <input type="text" id="node-input-Credentials" placeholder="Google Application's credentials">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-scope">
+            <i class="icon-tag"></i>
+            SCOPE
+        </label>
+        <textarea name="" id="" cols="30" rows="10" placeholder="scope"></textarea>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="Auth">
+    <p>Gmailでメールを送信します。</p>
+</script>
